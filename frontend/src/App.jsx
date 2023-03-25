@@ -16,11 +16,13 @@ export const App = () => {
         <ul>
           { incompleteTodos.map((todo) => {
             return (
-              <div className="list-row">
+              <div key={todo} className="list-row">
                 <li>{todo}</li>
                 <button>完了</button>
                 <button>削除</button>
               </div>
+            //   Reactの裏側で動いている仮想DOMは変更前と変更後を抽出して、差分のみ実際のDOMに反映するもの
+            //   ループでレンダリングされた場合、何個目の要素なのかを正確に目印を置く必要がある
             );
           }) }
         </ul>
