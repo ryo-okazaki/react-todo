@@ -11,7 +11,8 @@ export const App = () => {
   const onChangeToDoText = (event) => setTodoText(event.target.value);
 
   const onClickAdd = () => {
-    alert(todoText);
+    const newTodos = [...incompleteTodos, todoText]; // 配列のコピー
+    setIncompleteTodos(newTodos);
   }
 
   return (
