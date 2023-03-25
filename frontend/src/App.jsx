@@ -13,6 +13,8 @@ export const App = () => {
   const onClickAdd = () => {
     const newTodos = [...incompleteTodos, todoText]; // 配列のコピー
     setIncompleteTodos(newTodos);
+
+    setTodoText('');
   }
 
   return (
