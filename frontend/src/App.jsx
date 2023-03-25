@@ -10,11 +10,19 @@ export const App = () => {
 
   const onChangeToDoText = (event) => setTodoText(event.target.value);
 
+  const onClickAdd = () => {
+    alert(todoText);
+  }
+
   return (
     <>
       <div className="input-area">
-        <input placeholder="TODOを入力" value={todoText} onChange={onChangeToDoText} />
-        <button>追加</button>
+        <input
+          placeholder="TODOを入力"
+          value={todoText}
+          onChange={onChangeToDoText}
+        />
+        <button onClick={onClickAdd}>追加</button>
       </div>
 
       <div className="incomplete-area">
