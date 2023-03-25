@@ -53,6 +53,7 @@ export const App = () => {
         todoText={todoText}
         onChange={onChangeToDoText}
         onClick={onClickAdd}
+        disabled={incompleteTodos.length >= 5}
       />
 
       {incompleteTodos.length >= 5 && <p style={{color: 'red', width: '400px'}}>登録できるtodoは5個までです。</p>}
